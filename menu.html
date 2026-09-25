@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alke Wallet - Menú Principal</title>
+    <!-- Conexión a Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Conexión a jQuery (solicitada para más adelante) -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-light">
+
+    <!-- Barra de navegación responsive con Bootstrap -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container">
+            <a class="navbar-brand" href="menu.html">Alke Wallet</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="menu.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="login.html">Cerrar Sesión</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contenedor principal con etiquetas semánticas -->
+    <main class="container mt-5">
+        <h2 class="mb-4">Hola, Usuario</h2>
+        
+        <div class="row">
+            <!-- Tarjeta de resumen financiero -->
+            <section class="col-12 col-md-6 mb-4">
+                <div class="card shadow h-100">
+                    <div class="card-body text-center">
+                        <h5 class="card-title text-muted">Saldo Disponible</h5>
+                        <h2 class="card-text text-success">$150,000</h2>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Tarjeta de acciones rápidas -->
+            <section class="col-12 col-md-6 mb-4">
+                <div class="card shadow h-100">
+                    <div class="card-body">
+                        <h5 class="card-title text-center mb-4">Acciones Rápidas</h5>
+                        <div class="d-grid gap-2">
+                            <a href="deposit.html" class="btn btn-outline-primary">Depositar Fondos</a>
+                            <a href="sendmoney.html" class="btn btn-outline-secondary">Enviar Dinero</a>
+                            <a href="transactions.html" class="btn btn-outline-info">Ver Últimos Movimientos</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Scripts de Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

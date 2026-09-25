@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alke Wallet - Enviar Dinero</title>
+    <title>Alke Wallet - Depositar Fondos</title>
     <!-- Conexión a Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
     <!-- Conexión a jQuery -->
+     <link rel="stylesheet" href="style.css">
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 </head>
 <body class="bg-light">
@@ -28,33 +28,33 @@
         </div>
     </nav>
 
-    <!-- Contenedor principal de envío de dinero -->
+    <!-- Contenedor principal de depósito -->
     <main class="container mt-5">
         <div class="row justify-content-center">
             <section class="col-12 col-md-6">
                 <div class="card shadow p-4">
-                    <h3 class="text-center mb-4">Enviar Dinero</h3>
+                    <h3 class="text-center mb-4">Depositar a mi cuenta</h3>
                     
-                    <form id="formEnviarDinero">
-                        <!-- Campo de búsqueda preparado para autocompletado -->
+                    <!-- Saldo actual -->
+                    <div class="alert alert-info text-center" role="alert">
+                        Saldo actual: <strong id="saldoActual">$150,000</strong>
+                    </div>
+
+                    <!-- Formulario de depósito -->
+                    <form id="formDeposito">
                         <div class="mb-3">
-                            <label for="buscarContacto" class="form-label">Buscar Contacto</label>
-                            <input type="text" class="form-control" id="buscarContacto" placeholder="Nombre o correo del contacto..." required>
+                            <label for="montoDeposito" class="form-label">Monto a depositar</label>
+                            <input type="number" class="form-control" id="montoDeposito" placeholder="Ej: 50000" required min="1">
                         </div>
-                        
                         <div class="mb-3">
-                            <label for="montoEnviar" class="form-label">Monto a enviar</label>
-                            <input type="number" class="form-control" id="montoEnviar" placeholder="Ej: 15000" min="1" required>
+                            <label for="origenFondos" class="form-label">Medio de pago</label>
+                            <select class="form-select" id="origenFondos">
+                                <option value="1">Cuenta Bancaria Terminada en 1234</option>
+                                <option value="2">Tarjeta de Crédito</option>
+                            </select>
                         </div>
-                        
-                        <!-- Botones de acción -->
-                        <button type="submit" class="btn btn-primary w-100">Simular transferencia</button>
-                        
-                        <hr class="my-4">
-                        
-                        <!-- Botón para el evento de agregar contacto -->
-                        <button type="button" id="btnAgregarContacto" class="btn btn-outline-success w-100 mb-2">Agregar nuevo contacto</button>
-                        <a href="menu.html" class="btn btn-outline-secondary w-100">Cancelar</a>
+                        <button type="submit" class="btn btn-success w-100">Realizar depósito</button>
+                        <a href="menu.html" class="btn btn-outline-secondary w-100 mt-2">Cancelar</a>
                     </form>
                 </div>
             </section>
